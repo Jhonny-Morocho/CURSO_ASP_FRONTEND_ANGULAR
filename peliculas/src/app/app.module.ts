@@ -9,19 +9,23 @@ import { MenuComponent } from './menu/menu.component';
 import { ListadoPeliculasComponent } from './listado-peliculas/listado-peliculas.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
+import { CrearGeneroComponent } from './generos/crear-genero/crear-genero.component';
 @NgModule({
   declarations: [
     AppComponent,
     IndiceGenerosComponent,
     MenuComponent,
-    ListadoPeliculasComponent
+    ListadoPeliculasComponent,
+    CrearGeneroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
