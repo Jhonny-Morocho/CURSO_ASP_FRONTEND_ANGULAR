@@ -6,7 +6,7 @@ import { IndiceGenerosComponent } from './indice-generos/indice-generos.componen
 
 const routes: Routes = [
   { path: 'generos', component: IndiceGenerosComponent},
-  { path: 'editar', component:EditarGeneroComponent  },
+  { path: 'editar/:id', component:EditarGeneroComponent  },
   { path: 'crear', component:CrearGeneroComponent  },
   { path: '**', redirectTo: 'generos' } 
 ];

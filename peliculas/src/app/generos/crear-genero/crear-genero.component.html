@@ -2,5 +2,8 @@
 <app-menu></app-menu>
 <div class="contenedor">
     <h2>Crear genero</h2>
-    <app-formulario-genero></app-formulario-genero>
+    <app-formulario-genero
+    (onSubmit)="guardarCambios($event)"
+    [modelo]="modelo"
+    ></app-formulario-genero>
 </div>

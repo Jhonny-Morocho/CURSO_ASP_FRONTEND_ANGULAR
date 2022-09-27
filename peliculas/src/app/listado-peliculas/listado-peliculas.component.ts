@@ -41,4 +41,13 @@ export class ListadoPeliculasComponent implements OnInit {
       alert("ERROR AL CARGA REGISTROS");
     });
   }
+  borrar(id:number){
+    this.generosService.borrar(id).subscribe(response=>{
+      console.log(response);
+      this.cargarRegistros(this.paginaActual,this.cantidadRegistroMostar);
+    },error=>{
+      console.log(error);
+      alert("ERROR AL ELIMINAR");
+    });
+  }
 }

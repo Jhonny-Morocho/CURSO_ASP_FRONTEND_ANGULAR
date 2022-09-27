@@ -20,8 +20,8 @@
     <ng-container matColumnDef="acciones">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
-        <a mat-button [routerLink]="['/editar']" color="primary">Editar</a>     
-        <a mat-button routerLink="/generos" color="warn" >Eliminar</a>
+        <a mat-button [routerLink]="['/editar',element.id]" color="primary">Editar</a>     
+        <a mat-button (click)="borrar(element.id)" color="warn" >Eliminar</a>
       </td>
     </ng-container>
   
