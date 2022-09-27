@@ -1,1 +1,38 @@
-<p>listado-peliculas works!</p>
+<table mat-table [dataSource]="generos" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <a mat-button [routerLink]="['/editar']" color="primary">Editar</a>     
+        <a mat-button routerLink="/generos" color="warn" >Eliminar</a>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator 
+    [pageSize]="cantidadRegistroMostar"
+    [pageSizeOptions]="[5, 10, 20, 50]"
+    showFirstLastButtons
+    (page)="actalizarPaginacion($event)"
+    [length]="cantidadTotalRegistros"
+    aria-label="Select page">
+</mat-paginator>

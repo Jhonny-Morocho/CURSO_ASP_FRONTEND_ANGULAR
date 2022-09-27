@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { crearGeneroDTO } from '../genero';
+import { crearGeneroDTO, generoDTO } from '../genero';
 import { GenerosService } from '../generos.service';
 
 @Component({
-  selector: 'app-crear-genero',
-  templateUrl: './crear-genero.component.html',
-  styleUrls: ['./crear-genero.component.css']
+  selector: 'app-formulario-genero',
+  templateUrl: './formulario-genero.component.html',
+  styleUrls: ['./formulario-genero.component.css']
 })
-export class CrearGeneroComponent implements OnInit {
+export class FormularioGeneroComponent implements OnInit {
   form!:FormGroup;
+  @Input() modelo!:generoDTO;
   constructor(private formBuilder:FormBuilder,private generosService:GenerosService) { }
 
   ngOnInit(): void {

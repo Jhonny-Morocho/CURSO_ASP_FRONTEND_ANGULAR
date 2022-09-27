@@ -11,13 +11,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import { CrearGeneroComponent } from './generos/crear-genero/crear-genero.component';
+import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.component';
+import { FormularioGeneroComponent } from './generos/formulario-genero/formulario-genero.component';
 @NgModule({
   declarations: [
     AppComponent,
     IndiceGenerosComponent,
     MenuComponent,
     ListadoPeliculasComponent,
-    CrearGeneroComponent
+    CrearGeneroComponent,
+    EditarGeneroComponent,
+    FormularioGeneroComponent
   ],
   imports: [
     BrowserModule,
